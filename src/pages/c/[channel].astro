@@ -1,0 +1,13 @@
+---
+import { channels } from "@/data/channels";
+import Layout from "../../layouts/Layout.astro";
+export function getStaticPaths() {
+    return channels;
+}
+
+const { channel } = Astro.params;
+---
+
+<Layout>
+    <div>いい子だ、{channel}！</div>
+</Layout>
